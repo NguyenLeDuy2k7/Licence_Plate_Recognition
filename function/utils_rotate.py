@@ -48,17 +48,6 @@ def _get_image_dimensions(image: np.ndarray) -> tuple:
 
 
 def _find_dominant_line(lines: np.ndarray, height: int, center_threshold: int) -> int:
-    """
-    Find the position of the topmost valid line.
-    
-    Args:
-        lines: Detected lines from Hough transform
-        height: Image height
-        center_threshold: Whether to apply center threshold filtering
-    
-    Returns:
-        Index of the topmost line
-    """
     min_line_y = 100
     min_line_index = 0
     
@@ -66,7 +55,6 @@ def _find_dominant_line(lines: np.ndarray, height: int, center_threshold: int) -
         for x1, y1, x2, y2 in line:
             center_y = (y1 + y2) / 2
             
-            # Skip lines that are too close to top edge when threshold enabled
             if center_threshold == 1 and center_y < MIN_LINE_Y_POSITION:
                 continue
             
