@@ -15,7 +15,7 @@ class Config:
     VIDEO_SOURCE = "images\\video_2.mp4"
     
     OUTPUT_DIR = "result_video"
-    OUTPUT_FILENAME = "output_v11.mp4"
+    OUTPUT_FILENAME = "output.mp4"
     
     DISPLAY_WIDTH = 700
     DISPLAY_HEIGHT = 700
