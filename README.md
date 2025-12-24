@@ -10,7 +10,7 @@ pip install -r requirement.txt
 
 Pretrained models are included in the `model/` folder.
 
-**For YOLOv5:** Download yolov5 (old version) from [this link](https://drive.google.com/drive/folders/1W2NNPIjbt67RXvtUF2C3dYuqAAkogj4V?usp=sharing) and extract it to the project root directory.
+**For YOLOv5:** Download yolov5 (old version) from [this link]([https://drive.google.com/drive/folders/1W2NNPIjbt67RXvtUF2C3dYuqAAkogj4V?usp=sharing](https://drive.google.com/drive/folders/125DgE9RuFEF4tqkdR-WXzfmI45R_ZLEb?usp=sharing)) and extract it to the project root directory.
 
 ## Usage
 
