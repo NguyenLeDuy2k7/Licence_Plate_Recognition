@@ -20,6 +20,7 @@ class Config:
     WINDOW_NAME = 'License Plate Recognition - YOLOv5'
     
     DETECTION_SIZE = 640
+    LP_DETECTOR_CONFIDENCE = 0.50
     OCR_CONFIDENCE = 0.60
 
 
@@ -49,6 +50,7 @@ def initialize_models():
         force_reload=True, 
         source='local'
     )
+    detector.conf = Config.LP_DETECTOR_CONFIDENCE
     
     ocr_model = torch.hub.load(
         Config.YOLO_PATH, 

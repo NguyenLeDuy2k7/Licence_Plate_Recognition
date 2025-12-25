@@ -4,7 +4,6 @@ from typing import Tuple, List, Any, Dict
 POINT_TOLERANCE = 3
 MIN_CHARACTERS = 7
 MAX_CHARACTERS = 10
-DETECTION_CONFIDENCE = 0.6
 
 CHARACTER_CORRECTION_MAP: Dict[str, str] = {
     'T': '0', '0': '1', '1': '2', '2': '3', '3': '4',
@@ -122,7 +121,7 @@ def _format_two_line_plate(center_list: List[List], y_mean: float) -> str:
 
 
 def read_plate(yolo_license_plate: Any, image: Any) -> str:
-    results = yolo_license_plate(image, conf=DETECTION_CONFIDENCE)
+    results = yolo_license_plate(image)
     bounding_boxes = _extract_bounding_boxes_v11(results)
     
     num_chars = len(bounding_boxes)

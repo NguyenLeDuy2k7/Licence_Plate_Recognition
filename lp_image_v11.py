@@ -19,6 +19,8 @@ class Config:
     WINDOW_NAME = 'License Plate Recognition - YOLOv11'
     
     DETECTION_SIZE = 640
+    LP_DETECTOR_CONFIDENCE = 0.50
+    OCR_CONFIDENCE = 0.60
 
 
 class VisualStyle:
@@ -41,7 +43,9 @@ def parse_arguments():
 
 def initialize_models():
     detector = YOLO(Config.LP_DETECTOR_MODEL)
+    detector.conf = Config.LP_DETECTOR_CONFIDENCE
     ocr_model = YOLO(Config.LP_OCR_MODEL)
+    ocr_model.conf = Config.OCR_CONFIDENCE
     return detector, ocr_model
 
 
